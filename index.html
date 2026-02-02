@@ -1,49 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Guia de Compras 2026</title>
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#000000">
-<style>
-body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; background:#f5f5f5; padding:16px; }
-h1 { text-align:center; }
-h2 { background:#000; color:#fff; padding:8px 12px; border-radius:8px; margin-top:24px; }
-.item { background:#fff; border-radius:10px; padding:10px; margin-bottom:6px; }
-label { font-size:17px; display:flex; align-items:center; }
-input { width:22px; height:22px; margin-right:10px; }
-button { width:100%; padding:14px; font-size:18px; background:#c00; color:#fff; border:none; border-radius:12px; margin:20px 0; }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Guia de Compras | Instituição Familiar</title>
+  <meta name="description" content="Checklist de compras familiar, organizada por categorias, com quantidades e filtros." />
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#1f2933" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<h1>🛒 Guia de Compras 2026</h1>
-<button onclick="limpar()">🧹 Limpar lista</button>
+  <header class="app-header">
+    <h1>Guia de Compras</h1>
+    <p class="subtitle">Instituição Familiar</p>
 
-<div id="lista"></div>
+    <div class="controls">
+      <input
+        type="search"
+        id="searchInput"
+        placeholder="Pesquisar item…"
+        aria-label="Pesquisar item"
+      />
 
-<script>
-const data = {"Legumes e Verduras": ["Courgette", "Brócolis", "Repolho roxo", "Repolho", "Couve-flor", "Beterraba", "Cenoura", "Cebola roxa", "Batata Rena", "Alho", "Berinjela", "Cebola", "Banana pão", "Batata doce", "Mandioca", "Tomate", "Inhame", "Abóbora", "Pepino", "Pimento", "Couve", "Salsa", "Cebolinha", "Alho inglês", "Coentro", "Hortelã", "Manjericão", "Espinafre", "Alface", "Agrião", "Rúcula", "Tomate pequeno", "Cogumelo"], "Frutas": ["Maçã", "Pera", "Ananás", "Melancia", "Maracujá", "Pitaya", "Goiaba", "Banana de mesa", "Mamão", "Meloa", "Mangostão", "Tangerina", "Laranja", "Abacate", "Uva", "Kiwi", "Manga", "Coco", "Limão", "Morango", "Tâmara", "Mirtilos", "Pêssego", "Ameixa"], "Grãos": ["Grão de bico", "Lentilha", "Feijão branco", "Feijão amarelo", "Feijão castanho", "Feijão preto", "Feijão frade", "Feijão macunde", "Feijão vermelho", "Ginguba", "Arroz integral", "Arroz selvagem", "Chia", "Milho Pipoca", "Semente de Abóbora", "Sementes de Girassol", "Granola/Muesli", "Cereais 5kg"], "Peixes e Mariscos": ["Cara-pau", "Cacusso", "Caxuxo", "Corvina", "Camarão", "Espada", "Chopa", "Choco", "Lula", "Kingole", "Peixe Seco"], "Carnes": ["Carne seca", "Caixa de frango", "Peito de frango", "Carne moída", "Picanha", "Peito Alto", "Bifana", "Carne salgada"], "Outros": ["Aveia", "Farinha de trigo", "Fubá de bombó", "Açúcar", "Açúcar mascavo", "Cápsulas de café", "Cacau", "Canela em pó", "Vinagre de maçã", "Vinagre balsâmico", "Azeite extra-virgem", "Óleo de coco", "Óleo de girassol", "Pão de sementes", "Leite sem lactose", "Ovo", "Iogurte", "Polvilho azedo", "Bolachas água e sal", "Bolachas doces", "Uvas-passas"], "Excepcionais": ["Leite condensado", "Chocolate", "Doritos"], "Enchidos e Snacks": ["Manteiga", "Banana frita", "Bacon", "Presunto", "Chouriço", "Queijo curado", "Queijo flamengo", "Bolacha chocolate", "Geleia", "Tapioca"], "Material de Limpeza": ["Spray desinfectante", "Guardanapo", "Lixívia", "Toalhitas", "Esponja", "Esfregão", "Detergente", "Ambientador casa", "Ambientador carro", "Saco de lixo", "Detergente de chão", "Papel higiénico"]};
-</script>
-<script>
-const container = document.getElementById('lista');
-Object.keys(data).forEach(sec=>{
-  const h2=document.createElement('h2'); h2.textContent=sec; container.appendChild(h2);
-  data[sec].forEach(item=>{
-    const id=item.toLowerCase().replace(/[^a-z0-9]/g,'');
-    const div=document.createElement('div'); div.className='item';
-    div.innerHTML=`<label><input type="checkbox" data-id="${id}">${item}</label>`;
-    const cb=div.querySelector('input');
-    cb.checked=localStorage.getItem(id)==='true';
-    cb.addEventListener('change',()=>localStorage.setItem(id,cb.checked));
-    container.appendChild(div);
-  });
-});
-function limpar(){ if(confirm('Limpar toda a lista?')){ localStorage.clear(); location.reload(); } }
+      <select id="categoryFilter" aria-label="Filtrar por categoria">
+        <option value="all">Todas as categorias</option>
+      </select>
+    </div>
+  </header>
 
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('sw.js');
-}
-</script>
-</body></html>
+  <main id="shoppingList" class="shopping-list">
+    <!-- Conteúdo carregado via app.js -->
+  </main>
+
+  <footer class="app-footer">
+    <small>Guia de Compras · V5</small>
+  </footer>
+
+  <!-- App logic -->
+  <script src="app.js"></script>
+
+  <!-- PWA service worker -->
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js");
+    }
+  </script>
+
+</body>
+</html>

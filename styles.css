@@ -1,0 +1,91 @@
+:root {
+  --bg: #f4f6f8;
+  --card: #ffffff;
+  --primary: #1f2933;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: #111827;
+}
+
+.app-header {
+  background: var(--primary);
+  color: white;
+  padding: 1.2rem;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.subtitle {
+  margin: 0.2rem 0 1rem;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.controls {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.controls input,
+.controls select {
+  padding: 0.45rem 0.6rem;
+  border-radius: 6px;
+  border: none;
+  font-size: 0.9rem;
+}
+
+.shopping-list {
+  padding: 1rem;
+}
+
+.category {
+  margin-bottom: 1.2rem;
+}
+
+.category h2 {
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+  color: var(--primary);
+}
+
+.item {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.5rem;
+  margin-bottom: 0.4rem;
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.item input[type="number"] {
+  width: 70px;
+}
+
+.unit {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.app-footer {
+  text-align: center;
+  padding: 0.8rem;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
