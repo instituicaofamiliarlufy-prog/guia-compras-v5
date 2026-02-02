@@ -28,7 +28,7 @@ function populateFilters() {
 function getUnit(item) {
   console.log(item.toLowerCase());
   const i = item.toLowerCase();
-  if (i.includes("leite") || i.includes("gasosa") || i.includes("óleo") || i.includes("água"))
+  if (i.includes("leite") || i.includes("gasosa") || i.includes("óleo"))
     return "L";
   if (i.includes("arroz") || i.includes("fuba") || i.includes("farinha"))
     return "kg";
