@@ -26,6 +26,7 @@ function populateFilters() {
 }
 
 function getUnit(item) {
+  console.log('DISPLAYING ITEMS: ');
   console.log(item.toLowerCase());
   const i = item.toLowerCase();
   if (i.includes("leite") || i.includes("gasosa") || i.includes("óleo"))
