@@ -66,7 +66,9 @@ function render() {
         <span class="unit">${getUnit(item)}</span>
       `;
 
-      const [check, , qty] = row.querySelectorAll("input");
+      const inputs = row.querySelectorAll("input");
+      const check = inputs[0];
+      const qty = inputs[1];
 
       check.addEventListener("change", () => {
         save(item, check.checked, qty.value);
