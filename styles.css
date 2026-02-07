@@ -110,3 +110,11 @@ body {
 .top-actions .danger:hover {
   background: #991b1b;
 }
+
+input.qty-default {
+  color: #9ca3af; /* cinzento */
+}
+
+input.qty-modified {
+  color: #111827; /* preto */
+}
