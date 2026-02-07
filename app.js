@@ -46,8 +46,8 @@ function render() {
   Object.entries(data).forEach(([cat, items]) => {
     if (category !== "all" && category !== cat) return;
 
-    const filtered = items.filter(i =>
-      i.toLowerCase().includes(search)
+    const filtered = items.filter(item =>
+      item.name.toLowerCase().includes(search)
     );
     if (!filtered.length) return;
 
