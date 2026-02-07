@@ -56,16 +56,31 @@ function render() {
     catEl.innerHTML = `<h2>${cat}</h2>`;
 
     filtered.forEach(item => {
-      const s = state[item] || {};
+      // const s = state[item] || {};
+      // const row = document.createElement("div");
+      // row.className = "item";
+
+      // row.innerHTML = `
+      //   <input type="checkbox" ${s.checked ? "checked" : ""}>
+      //   <span>${item}</span>
+      //   <input type="number" min="0" value="${s.qty || ""}">
+      //   <span class="unit">${getUnit(item)}</span>
+      // `;
+
+      const s = state[item.name] || {
+        checked: false,
+        qty: item.defaultQty
+      };
+
       const row = document.createElement("div");
       row.className = "item";
-
+      
       row.innerHTML = `
-        <input type="checkbox" ${s.checked ? "checked" : ""}>
-        <span>${item}</span>
-        <input type="number" min="0" value="${s.qty || ""}">
-        <span class="unit">${getUnit(item)}</span>
-      `;
+      <input type="checkbox" ${s.checked ? "checked" : ""}>
+          <span>${item.name}</span>
+          <input type="number" min="0" value="${s.qty}">
+          <span class="unit">${item.unit}</span>
+          `;
 
       const inputs = row.querySelectorAll("input");
       const check = inputs[0];
@@ -86,8 +101,8 @@ function render() {
   });
 }
 
-function save(item, checked, qty) {
-  state[item] = { checked, qty };
+function save(itemName, checked, qty) {
+  state[itemName] = { checked, qty };
   localStorage.setItem("shopping-state", JSON.stringify(state));
 }
 
