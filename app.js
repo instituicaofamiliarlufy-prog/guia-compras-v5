@@ -90,3 +90,15 @@ function save(item, checked, qty) {
   state[item] = { checked, qty };
   localStorage.setItem("shopping-state", JSON.stringify(state));
 }
+
+const clearBtn = document.getElementById("clearListBtn");
+
+if (clearBtn) {
+  clearBtn.addEventListener("click", () => {
+    if (confirm("Limpar toda a lista de compras?")) {
+      state = {};
+      localStorage.removeItem("shopping-state");
+      render();
+    }
+  });
+}
