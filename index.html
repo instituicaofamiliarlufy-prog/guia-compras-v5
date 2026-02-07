@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Guia de Compras | Instituição Familiar</title>
-  <meta name="description" content="Checklist de compras familiar, organizada por categorias, com quantidades e filtros." />
+  <meta name="description"
+    content="Ferramenta Checklist de compras familiar, organizada por categorias, com quantidades e filtros." />
   <meta property="og:title" content="Guia de Compras v5" />
-<meta property="og:image" content="https://instituicaofamiliarlufy-prog.github.io/guia-compras-v5/resources/logo.jpg" />
+  <meta property="og:image"
+    content="https://instituicaofamiliarlufy-prog.github.io/guia-compras-v5/resources/logo.jpg" />
 
 
   <!-- PWA -->
@@ -18,6 +21,7 @@
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
   <header class="app-header">
@@ -25,16 +29,16 @@
     <p class="subtitle">Instituição Familiar</p>
 
     <div class="controls">
-      <input
-        type="search"
-        id="searchInput"
-        placeholder="Pesquisar item…"
-        aria-label="Pesquisar item"
-      />
+      <input type="search" id="searchInput" placeholder="Pesquisar item…" aria-label="Pesquisar item" />
 
       <select id="categoryFilter" aria-label="Filtrar por categoria">
         <option value="all">Todas as categorias</option>
       </select>
+      <div class="actions">
+        <button id="clearListBtn" class="danger">
+          Limpar lista
+        </button>
+      </div>
     </div>
   </header>
 
@@ -43,11 +47,7 @@
   </main>
 
   <footer class="app-footer">
-    <div class="actions">
-  <button id="clearListBtn" class="danger">
-    Limpar lista
-  </button>
-</div>
+
     <small>Guia de Compras · V5</small>
   </footer>
 
@@ -62,4 +62,5 @@
   </script>
 
 </body>
+
 </html>
