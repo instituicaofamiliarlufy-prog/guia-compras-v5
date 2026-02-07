@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestão de Itens | Guia de Compras</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="app-header">
+  <h1>Gestão de Itens</h1>
+  <p class="subtitle">CRUD · data/items.json</p>
+</header>
+
+<main class="shopping-list">
+  <div id="adminList"></div>
+
+  <h3>Adicionar novo item</h3>
+
+  <input id="newName" placeholder="Nome do item">
+  <input id="newQty" type="number" placeholder="Qtd default">
+  <input id="newUnit" placeholder="Unidade (kg, un, L)">
+  <input id="newCat" placeholder="Categoria">
+
+  <button onclick="addItem()">Adicionar</button>
+</main>
+
+<script src="products-admin.js"></script>
+</body>
+</html>
