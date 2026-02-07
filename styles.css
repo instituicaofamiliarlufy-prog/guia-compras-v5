@@ -90,21 +90,23 @@ body {
   color: var(--muted);
 }
 
-.actions {
-  padding: 1rem;
-  text-align: center;
+.top-actions {
+  background: var(--bg);
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid var(--border);
+  text-align: right;
 }
 
-button.danger {
+.top-actions .danger {
   background: #b91c1c;
-  color: white;
+  color: #fff;
   border: none;
-  border-radius: 8px;
-  padding: 0.6rem 1.2rem;
-  font-size: 0.9rem;
+  border-radius: 6px;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
   cursor: pointer;
 }
 
-button.danger:hover {
+.top-actions .danger:hover {
   background: #991b1b;
 }
