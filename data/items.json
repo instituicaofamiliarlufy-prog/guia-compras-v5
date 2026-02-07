@@ -17,10 +17,6 @@
     "Peito de Frango",
     "Picanha"
   ],
-  "Carnes e Peixe": [
-    "Bife da Vazia",
-    "Filete de Pescada Oceano"
-  ],
   "Cereais e Derivados": [
     "Cereais Corn Flakes Nacional",
     "Cereais Muesli com Frutos Sante",
@@ -155,6 +151,20 @@
   "Mercearia": [
     "Azeitona"
   ],
+  "Peixes e Mariscos": [
+    "Cacusso",
+    "Camarão",
+    "Cara-Pau",
+    "Caxuxo",
+    "Choco",
+    "Chopa",
+    "Corvina",
+    "Espada",
+    "Filete de Pescada Oceano",
+    "Kingole",
+    "Lula",
+    "Peixe Seco"
+  ],
   "Outros": [
     "Açúcar",
     "Açúcar Branco Patriota",
@@ -190,18 +200,5 @@
     "Uvas-Passas",
     "Vinagre Balsâmico",
     "Vinagre de Maçã"
-  ],
-  "Peixes e Mariscos": [
-    "Cacusso",
-    "Camarão",
-    "Cara-Pau",
-    "Caxuxo",
-    "Choco",
-    "Chopa",
-    "Corvina",
-    "Espada",
-    "Kingole",
-    "Lula",
-    "Peixe Seco"
   ]
 }
