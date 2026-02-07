@@ -2,7 +2,7 @@
   "Bebidas": [
     "Água",
     "Chá Camomila Lipton",
-    "Chá De Gengibre Bom Dia",
+    "Chá de Gengibre Bom Dia",
     "Chá Limão Alfinna",
     "Lima-Limão 7up Lata",
     "Refrigerante Guaraná Welwitschia"
@@ -12,21 +12,21 @@
     "Carne Seca Friboi",
     "Carne Moída",
     "Carne Salgada",
-    "Caixa De Frango",
+    "Caixa de Frango",
     "Peito Alto",
-    "Peito De Frango",
+    "Peito de Frango",
     "Picanha"
   ],
   "Carnes e Peixe": [
-    "Bife Da Vazia",
-    "Filete De Pescada Oceano"
+    "Bife da Vazia",
+    "Filete de Pescada Oceano"
   ],
   "Cereais e Derivados": [
     "Cereais Corn Flakes Nacional",
-    "Cereais Muesli Com Frutos Sante",
+    "Cereais Muesli com Frutos Sante",
     "Cereais Muesli Tradicional Sante",
-    "Fubá De Milho Amarelo Dona Ana",
-    "Milho De Pipoca Alimo"
+    "Fubá de Milho Amarelo Dona Ana",
+    "Milho de Pipoca Alimo"
   ],
   "Cogumelo": [
     "Cogumelo"
@@ -39,7 +39,7 @@
   ],
   "Enchidos e Snacks": [
     "Bacon Extra Nacos",
-    "Banana De Banana Frittas",
+    "Banana de Banana Frittas",
     "Banana Frita",
     "Chouriço",
     "Geléia (Doce)",
@@ -59,7 +59,7 @@
     "Abacate",
     "Ameixa",
     "Ananás",
-    "Banana De Mesa",
+    "Banana de Mesa",
     "Banana-Pão",
     "Coco",
     "Goiaba",
@@ -83,7 +83,7 @@
   "Grãos": [
     "Arroz Integral",
     "Arroz Selvagem",
-    "Cereais (1 Pacote De 5kg)",
+    "Cereais (1 Pacote de 5kg)",
     "Chia",
     "Feijão Amarelo",
     "Feijão Branco",
@@ -93,15 +93,15 @@
     "Feijão Preto",
     "Feijão Vermelho",
     "Ginguba",
-    "Grão De Bico",
+    "Grão de Bico",
     "Granola/Muesli (4 Unidades)",
     "Lentilha",
     "Milho Pipoca",
-    "Semente De Abóbora",
-    "Sementes De Girassol"
+    "Semente de Abóbora",
+    "Sementes de Girassol"
   ],
   "Higiene Pessoal": [
-    "Pasta De Dente"
+    "Pasta de Dente"
   ],
   "Legumes e verduras": [
     "Abóbora",
@@ -137,10 +137,10 @@
     "Tomate Pequeno"
   ],
   "Material de Limpeza": [
-    "Ambientador De Casa",
-    "Ambientador Do Carro",
+    "Ambientador de Casa",
+    "Ambientador do Carro",
     "Detergente",
-    "Detergente De Chão",
+    "Detergente de Chão",
     "Detergente Multiusos Fada",
     "Esfregão",
     "Esponja",
@@ -148,8 +148,8 @@
     "Lava Loiça Ultra 5l Limão",
     "Lixívia",
     "Papel Higiénico",
-    "Saco De Lixo",
-    "Spray De Limpeza Desinfectante",
+    "Saco de Lixo",
+    "Spray de Limpeza Desinfectante",
     "Toalhitas"
   ],
   "Mercearia": [
@@ -165,14 +165,14 @@
     "Azeite Gallo Puro",
     "Batata Doce Chips Fr",
     "Bolac Crack Esal",
-    "Bolachas De Água E Sal",
+    "Bolachas de Água e Sal",
     "Bolachas Doces",
     "Cacau",
-    "Canela Em Pó",
-    "Cápsulas De Café (40)",
-    "Farenha De Trigo Pat Un",
-    "Farinha De Trigo",
-    "Fubá De Bombó",
+    "Canela em Pó",
+    "Cápsulas de Café (40)",
+    "Farenha de Trigo Pat Un",
+    "Farinha de Trigo",
+    "Fubá de Bombó",
     "Iogurte",
     "Leite (Sem Lactose)",
     "Leite Uht Meio-Gordo Gulkis",
@@ -180,16 +180,16 @@
     "Massa Lasanha Ovo Milaneza",
     "Mel",
     "Ovos Vale Verde Cart U",
-    "Óleo De Coco",
-    "Óleo De Girassol",
-    "Óleo De Soja Boa Vista",
+    "Óleo de Coco",
+    "Óleo de Girassol",
+    "Óleo de Soja Boa Vista",
     "Ovo",
     "Polvilho Azedo Terri",
     "Pão Arabe",
-    "Pão De Sementes",
+    "Pão de Sementes",
     "Uvas-Passas",
     "Vinagre Balsâmico",
-    "Vinagre De Maçã"
+    "Vinagre de Maçã"
   ],
   "Peixes e Mariscos": [
     "Cacusso",
