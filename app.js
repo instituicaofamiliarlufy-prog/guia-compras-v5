@@ -56,6 +56,7 @@ function render() {
     catEl.innerHTML = `<h2>${cat}</h2>`;
 
     filtered.forEach(item => {
+      
       // const s = state[item] || {};
       // const row = document.createElement("div");
       // row.className = "item";
