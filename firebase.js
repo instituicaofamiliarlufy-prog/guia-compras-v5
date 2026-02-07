@@ -15,3 +15,10 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+
+// Initialize Cloud Firestore and get a reference to the service
+const db = getFirestore(app); // <--- ADD THIS LINE
+
+// Export the initialized app and db instances
+// This makes them available for other JavaScript files to import.
+export { app, db }; // <--- MODIFY THIS LINE to export 'db' as well
