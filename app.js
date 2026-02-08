@@ -1,10 +1,35 @@
+import { doc, onSnapshot, setDoc } from "firebase/firestore";
+import { db } from "./firebase.js";
+
+
 const listEl = document.getElementById("shoppingList");
 const filterEl = document.getElementById("categoryFilter");
 const searchEl = document.getElementById("searchInput");
 const clearBtn = document.getElementById("clearListBtn");
 
 let data = {};
-let state = JSON.parse(localStorage.getItem("shopping-state") || "{}");
+//let state = JSON.parse(localStorage.getItem("shopping-state") || "{}");
+
+const listRef = doc(db, "lista-compras");
+let state = {};
+
+async function testarFirestore() {
+  try {
+    const snapshot = await getDocs(collection(db, "lista-compras"));
+
+    console.log("📦 Total de documentos:", snapshot.size);
+
+    snapshot.forEach(doc => {
+      console.log("➡️", doc.id, doc.data());
+    });
+
+    if (snapshot.empty) {
+      console.log("⚠️ Coleção existe mas está vazia");
+    }
+  } catch (err) {
+    console.error("❌ Erro ao ligar ao Firestore:", err);
+  }
+}
 
 /* =========================
    LOAD DATA
@@ -56,6 +81,8 @@ function populateFilters() {
 ========================= */
 
 function render() {
+   testarFirestore();
+   
   listEl.innerHTML = "";
 
   const selectedCategory = filterEl.value;
