@@ -76,7 +76,7 @@ function render() {
 
     filteredItems.forEach(item => {
       const saved = state[item.name] || {
-        checked: false,
+        checked: item.checked,
         qty: item.defaultQty
       };
 
