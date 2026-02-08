@@ -13,10 +13,10 @@ const searchEl = document.getElementById("searchInput");
 const clearBtn = document.getElementById("clearListBtn");
 
 let data = {};
-//let state = JSON.parse(localStorage.getItem("shopping-state") || "{}");
+let state = JSON.parse(localStorage.getItem("shopping-state") || "{}");
 
-const listRef = doc(db, "lista-compras");
-let state = {};
+//const listRef = doc(db, "lista-compras");
+//let state = {};
 
 async function testarFirestore() {
   try {
